@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎓 Dayananda Sagar Institutions - College Newsletter & Event Management System
 
 A complete MERN stack application for managing college events and newsletters.
@@ -372,3 +373,6 @@ Contributions are welcome! Please feel free to enhance the project.
 ---
 
 **Created for Dayananda Sagar Institutions** ✨
+=======
+# College-Newspaper
+>>>>>>> 5d0c7efd34a3f0ec52f8a830f34cdcd564dd30cb
