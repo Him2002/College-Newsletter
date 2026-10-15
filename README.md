@@ -1,16 +1,16 @@
 <<<<<<< HEAD
-# 🎓 Dayananda Sagar Institutions - College Newsletter & Event Management System
+  Dayananda Sagar Institutions - College Newsletter & Event Management System
 
 A complete MERN stack application for managing college events and newsletters.
 
-## 📋 Overview
+ Overview
 
 This system allows:
-- **Students** to submit events with image uploads
-- **HODs** to approve/reject events before they go public
-- **Everyone** to view approved events in the monthly newsletter via a public page
+- Students to submit events with image uploads
+- HODs to approve/reject events before they go public
+- Everyone to view approved events in the monthly newsletter via a public page
 
-## ✨ Features
+Features
 
 ✅ User authentication with JWT
 ✅ Role-based access control (Student, HOD, Admin)
@@ -22,9 +22,8 @@ This system allows:
 ✅ Responsive design
 ✅ RESTful API
 
-## 🛠️ Tech Stack
-
-**Backend:**
+🛠️ Tech Stack
+Backend:
 - Node.js & Express.js
 - MongoDB
 - JWT Authentication
@@ -32,16 +31,15 @@ This system allows:
 - Multer for file uploads
 - CORS enabled
 
-**Frontend:**
+Frontend:
 - React.js (with Vite)
 - React Router v6
 - Axios for API calls
 - Context API for state management
 - CSS for styling
 
-## 📦 Project Structure
+Project Structure
 
-```
 dayanand news/
 ├── backend/
 │   ├── config/
@@ -96,28 +94,26 @@ dayanand news/
     ├── .env.example
     ├── vite.config.js
     └── package.json
-```
+ Installation & Setup
 
-## 🚀 Installation & Setup
-
-### Prerequisites
+ Prerequisites
 - Node.js (v14 or higher)
 - npm or yarn
 - MongoDB (local or Atlas)
 
-### Backend Setup
+Backend Setup
 
-1. **Navigate to backend directory:**
+1. Navigate to backend directory:
 ```bash
 cd backend
 ```
 
-2. **Install dependencies:**
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-3. **Configure environment variables:**
+3. Configure environment variables:
 Create a `.env` file (or copy from `.env.example`):
 ```
 PORT=5000
@@ -126,46 +122,46 @@ JWT_SECRET=your_jwt_secret_key_here_change_in_production
 NODE_ENV=development
 ```
 
-**For MongoDB Atlas:**
+For MongoDB Atlas:
 ```
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/dayananda_newsletter
 ```
 
-4. **Start the backend server:**
+4. Start the backend server:
 ```bash
 npm run dev
 ```
 
 The backend will run on `http://localhost:5000`
 
-### Frontend Setup
+Frontend Setup
 
-1. **Navigate to frontend directory:**
+1. Navigate to frontend directory:
 ```bash
 cd frontend
 ```
 
-2. **Install dependencies:**
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-3. **Configure environment variables:**
+3. Configure environment variables:
 Create a `.env` file (or copy from `.env.example`):
 ```
 VITE_API_URL=http://localhost:5000/api
 ```
 
-4. **Start the development server:**
+4. Start the development server:
 ```bash
 npm run dev
 ```
 
 The frontend will run on `http://localhost:3000`
 
-## 🔐 User Roles & Features
+User Roles & Features
 
-### 1. **Student**
+1. Student
 - Register with email and password
 - Create events with image upload
 - View their submitted events
@@ -174,27 +170,27 @@ The frontend will run on `http://localhost:3000`
 - Edit pending events
 - View approved events in the newsletter
 
-### 2. **Head of Department (HOD)**
+2. Head of Department (HOD)
 - Login with credentials
 - View all pending events from their department
 - Approve events
 - Reject events with feedback
 - Same newsletter access as students
 
-### 3. **Admin** (Optional)
+3. Admin (Optional)
 - Full access to all features
 - Can approve/reject any event
 - Can manage users and events
 
-## 📡 API Endpoints
+ API Endpoints
 
-### Authentication
+Authentication
 ```
 POST   /api/auth/register       - Register a new user
 POST   /api/auth/login          - Login user
 ```
 
-### Events (Protected Routes)
+Events (Protected Routes)
 ```
 POST   /api/events              - Create event (Students)
 GET    /api/events/my           - Get user's events
@@ -207,9 +203,9 @@ PUT    /api/events/:id/reject   - Reject event (HOD/Admin)
 DELETE /api/events/:id          - Delete event (Students/Admin)
 ```
 
-## 📝 Example Usage
+ Example Usage
 
-### 1. Register as Student
+1. Register as Student
 ```json
 {
   "name": "John Doe",
@@ -220,7 +216,7 @@ DELETE /api/events/:id          - Delete event (Students/Admin)
 }
 ```
 
-### 2. Register as HOD
+2. Register as HOD
 ```json
 {
   "name": "Dr. Jane Smith",
@@ -231,7 +227,7 @@ DELETE /api/events/:id          - Delete event (Students/Admin)
 }
 ```
 
-### 3. Create Event
+3. Create Event
 ```
 POST /api/events
 Headers: Authorization: Bearer <token>
@@ -244,17 +240,17 @@ Body: FormData with:
   - image: <file>
 ```
 
-## 🎨 UI Features
+ UI Features
 
-- **Clean Modern Design** - Professional gradient backgrounds
-- **Responsive Layout** - Works on desktop, tablet, mobile
-- **Form Validation** - Real-time feedback
-- **Image Preview** - See images before upload
-- **Status Indicators** - Visual feedback for event status
-- **Navigation Bar** - Sticky navigation with user info
-- **Protected Routes** - Role-based access control
+- Clean Modern Design - Professional gradient backgrounds
+- Responsive Layout  - Works on desktop, tablet, mobile
+- Form Validation  - Real-time feedback
+-  Image Preview  - See images before upload
+- Status Indicators  - Visual feedback for event status
+- Navigation Bar  - Sticky navigation with user info
+- Protected Routes  - Role-based access control
 
-## 🔒 Security Features
+ Security Features
 
 - ✅ Password hashing with bcrypt
 - ✅ JWT token-based authentication
@@ -264,35 +260,35 @@ Body: FormData with:
 - ✅ Input validation
 - ✅ Error handling middleware
 
-## 📂 File Upload
+ File Upload
 
 Images are stored in the `backend/uploads/` directory and served via:
 ```
 http://localhost:5000/uploads/event-<timestamp>.jpg
 ```
 
-## 🐛 Troubleshooting
+ Troubleshooting
 
-**MongoDB Connection Error:**
+MongoDB Connection Error:
 - Ensure MongoDB is running locally or check Atlas credentials
 - Verify `MONGODB_URI` in `.env`
 
-**CORS Issues:**
+CORS Issues:
 - Check that backend is running on port 5000
 - Verify `VITE_API_URL` in frontend `.env`
 
-**Port Already in Use:**
+Port Already in Use:
 - Change `PORT` in backend `.env`
 - Change `port` in frontend `vite.config.js`
 
-**Image Upload Failed:**
+Image Upload Failed:
 - Check `backend/uploads/` directory exists
 - Verify file size < 5MB
 - Ensure image format is jpg, jpeg, png, or gif
 
-## 📊 Database Schema
+ Database Schema
 
-### User
+ User
 ```javascript
 {
   name: String,
@@ -304,7 +300,7 @@ http://localhost:5000/uploads/event-<timestamp>.jpg
 }
 ```
 
-### Event
+ Event
 ```javascript
 {
   title: String,
@@ -322,22 +318,21 @@ http://localhost:5000/uploads/event-<timestamp>.jpg
   createdAt: Date
 }
 ```
+ Deployment
 
-## 🚀 Deployment
-
-### Backend (Heroku/Render)
+ Backend (Heroku/Render)
 1. Create `Procfile`: `web: node server.js`
 2. Connect MongoDB Atlas
 3. Set environment variables in hosting platform
 4. Deploy
 
-### Frontend (Vercel/Netlify)
+Frontend (Vercel/Netlify)
 1. Build: `npm run build`
 2. Deploy `dist` folder
 3. Set env variables
 4. Done!
 
-## 📝 Notes
+ Notes
 
 - Change `JWT_SECRET` in production to a strong random string
 - Use MongoDB Atlas for production (not local MongoDB)
@@ -345,9 +340,9 @@ http://localhost:5000/uploads/event-<timestamp>.jpg
 - Add SSL certificates for HTTPS
 - Use environment-specific configurations
 
-## 👨‍💻 Development Tips
+ Development Tips
 
-**Run both servers concurrently:**
+Run both servers concurrently:
 ```bash
 # Terminal 1
 cd backend && npm run dev
@@ -356,23 +351,23 @@ cd backend && npm run dev
 cd frontend && npm run dev
 ```
 
-**View API responses:**
+View API responses:
 Use Postman or similar tool for testing APIs before implementing frontend
 
-**MongoDB GUI:**
+MongoDB GUI:
 Use MongoDB Compass for visual database management
 
-## 📄 License
+ License
 
 MIT License - Feel free to use this project!
 
-## 🤝 Contributing
+ Contributing
 
 Contributions are welcome! Please feel free to enhance the project.
 
----
+---        
 
-**Created for Dayananda Sagar Institutions** ✨
-=======
-# College-Newspaper
+Created for Dayananda Sagar Institutions
+
+ College-Newspaper
 >>>>>>> 5d0c7efd34a3f0ec52f8a830f34cdcd564dd30cb
